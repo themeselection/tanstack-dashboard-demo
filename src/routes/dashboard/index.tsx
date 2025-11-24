@@ -331,7 +331,7 @@ function RouteComponent() {
 
             <div className='grid gap-6 max-xl:col-span-full lg:max-xl:grid-cols-2'>
                 {/* Product Insights Card */}
-                <ProductInsightsCard className='justify-between gap-3 [&>[data-slot=card-content]]:space-y-5' />
+                <ProductInsightsCard className='justify-between gap-3 *:data-[slot=card-content]:space-y-5' />
 
                 {/* Total Earning Card */}
                 <TotalEarningCard
@@ -341,12 +341,11 @@ function RouteComponent() {
                     percentage={10}
                     comparisonText='Compare to last year ($84,325)'
                     earningData={earningData}
-                    className='justify-between gap-5 sm:min-w-0 [&>[data-slot=card-content]]:space-y-7'
+                    className='justify-between gap-5 sm:min-w-0 *:data-[slot=card-content]:space-y-7'
                 />
             </div>
 
-            <SalesMetricsCard className='col-span-full xl:col-span-2 [&>[data-slot=card-content]]:space-y-6' />
-
+            <SalesMetricsCard className='col-span-full xl:col-span-2 *:data-[slot=card-content]:space-y-6' />
             <Card className='col-span-full w-full py-0'>
                 <TransactionDatatable data={transactionData} />
             </Card>
